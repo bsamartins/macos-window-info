@@ -2,13 +2,21 @@ import time
 from Quartz import CGWindowListCopyWindowInfo, kCGWindowListExcludeDesktopElements, kCGNullWindowID
 from Foundation import NSSet, NSMutableSet
 
-wl1 = CGWindowListCopyWindowInfo(kCGWindowListExcludeDesktopElements, kCGNullWindowID)
-print('Move target window')
-time.sleep(5)
-wl2 = CGWindowListCopyWindowInfo(kCGWindowListExcludeDesktopElements, kCGNullWindowID)
+print('Monitoring window movements. Press Ctrl+C to exit.')
+prev_windows = CGWindowListCopyWindowInfo(kCGWindowListExcludeDesktopElements, kCGNullWindowID)
 
-w = NSMutableSet.setWithArray_(wl1)
-w.minusSet_(NSSet.setWithArray_(wl2))
-print('\nList of windows that moved:')
-print(w)
-print('\n')
+try:
+    while True:
+        time.sleep(1)
+        curr_windows = CGWindowListCopyWindowInfo(kCGWindowListExcludeDesktopElements, kCGNullWindowID)
+        prev_set = NSMutableSet.setWithArray_(prev_windows)
+        curr_set = NSSet.setWithArray_(curr_windows)
+        moved = NSMutableSet.setWithArray_(prev_windows)
+        moved.minusSet_(curr_set)
+        if len(moved) > 0:
+            print('\nList of windows that moved:')
+            print(moved)
+            print('\n')
+        prev_windows = curr_windows
+except KeyboardInterrupt:
+    print('Stopped monitoring.')
