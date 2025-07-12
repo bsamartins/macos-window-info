@@ -14,9 +14,11 @@ try:
         moved = NSMutableSet.setWithArray_(prev_windows)
         moved.minusSet_(curr_set)
         if len(moved) > 0:
-            print('\nList of windows that moved:')
-            print(moved)
-            print('\n')
+            for win in moved:
+                pid = win.get('kCGWindowOwnerPID', 'N/A')
+                title = win.get('kCGWindowName', 'N/A')
+                exe = win.get('kCGWindowOwnerName', 'N/A')
+                print(f"PID: {pid}, Executable: {exe}, Title: {title}")
         prev_windows = curr_windows
 except KeyboardInterrupt:
     print('Stopped monitoring.')
