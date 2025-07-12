@@ -1,5 +1,5 @@
 [project]
-name = "find-window-pid"
+name = "find-macos-window-pid"
 version = "0.1.0"
 description = ""
 authors = [
