@@ -1,4 +1,4 @@
-# find-window-pid
+# macos-window-info
 
 A Python project to find the process ID (PID) of a window by its title or other attributes.
 

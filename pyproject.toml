@@ -1,5 +1,5 @@
 [project]
-name = "find-macos-window-pid"
+name = "macos-window-info"
 version = "0.1.0"
 description = "A Python tool to find the process ID (PID) of a macOS window by its title or other attributes"
 authors = [
