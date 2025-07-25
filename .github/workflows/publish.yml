@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: ${{ github.event.inputs.environment || 'pypi' }}
-      url: ${{ github.event.inputs.environment == 'testpypi' && 'https://test.pypi.org/project/find-macos-window-pid/' || 'https://pypi.org/project/find-macos-window-pid/' }}
+      url: ${{ github.event.inputs.environment == 'testpypi' && 'https://test.pypi.org/project/macos-window-info/' || 'https://pypi.org/project/macos-window-info/' }}
     permissions:
       id-token: write
 
