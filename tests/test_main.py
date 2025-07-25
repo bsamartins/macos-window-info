@@ -1,4 +1,4 @@
-"""Tests for find-macos-window-pid package."""
+"""Tests for macos-window-info package."""
 
 import pytest
 import sys

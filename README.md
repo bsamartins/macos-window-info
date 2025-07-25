@@ -2,9 +2,9 @@
 
 A Python project to find the process ID (PID) of a window by its title or other attributes.
 
-[![Build and Test](https://github.com/bemartins/find-macos-window-pid/actions/workflows/build.yml/badge.svg)](https://github.com/bemartins/find-macos-window-pid/actions/workflows/build.yml)
-[![Code Quality](https://github.com/bemartins/find-macos-window-pid/actions/workflows/code-quality.yml/badge.svg)](https://github.com/bemartins/find-macos-window-pid/actions/workflows/code-quality.yml)
-[![PyPI version](https://badge.fury.io/py/find-macos-window-pid.svg)](https://badge.fury.io/py/find-macos-window-pid)
+[![Build and Test](https://github.com/bsamartins/macos-window-info/actions/workflows/build.yml/badge.svg)](https://github.com/bsamartins/macos-window-info/actions/workflows/build.yml)
+[![Code Quality](https://github.com/bsamartins/macos-window-info/actions/workflows/code-quality.yml/badge.svg)](https://github.com/bsamartins/macos-window-info/actions/workflows/code-quality.yml)
+[![PyPI version](https://badge.fury.io/py/macos-window-info.svg)](https://badge.fury.io/py/macos-window-info)
 
 ## Requirements
 - Python 3.13 or higher
@@ -14,7 +14,7 @@ A Python project to find the process ID (PID) of a window by its title or other 
 
 ### From PyPI
 ```bash
-pip install find-macos-window-pid
+pip install macos-window-info
 ```
 
 ### From source
@@ -28,13 +28,13 @@ poetry install
 Run the main script:
 
 ```bash
-python find-macos-window-pid.py
+python macos-window-info.py
 ```
 
 Or if installed via pip:
 
 ```bash
-find-macos-window-pid
+macos-window-info
 ```
 
 ## Development
@@ -42,8 +42,8 @@ find-macos-window-pid
 ### Setting up development environment
 ```bash
 # Clone the repository
-git clone https://github.com/bemartins/find-macos-window-pid.git
-cd find-macos-window-pid
+git clone https://github.com/bsamartins/macos-window-info.git
+cd macos-window-info
 
 # Install with development dependencies
 poetry install --with dev
@@ -82,5 +82,5 @@ You can create these tokens at:
 You can also manually trigger publishing to Test PyPI using the workflow dispatch feature in GitHub Actions.
 
 ## Author
-Bernardo Martins (<bemartins@citco.com>)
+Bernardo Martins (<bsamartins@gmail.com>)
 
