@@ -69,4 +69,4 @@ jobs:
         path: src/
         level: medium
         confidence: medium
-        continue-on-error: true
+#        continue-on-error: true
