@@ -29,7 +29,7 @@ Repository = "https://github.com/bemartins/find-macos-window-pid"
 Issues = "https://github.com/bemartins/find-macos-window-pid/issues"
 
 [project.scripts]
-find-macos-window-pid = "find_macos_window_pid.find-macos-window-pid:main"
+find-macos-window-pid = "macos_window_info.main:main"
 
 [project.optional-dependencies]
 dev = [

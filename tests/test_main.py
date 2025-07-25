@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 def test_package_import():
     """Test that the package can be imported."""
     try:
-        import find_macos_window_pid
+        import macos_window_info
         assert True
     except ImportError:
         pytest.skip("Package import failed - this is expected during CI/CD setup")
